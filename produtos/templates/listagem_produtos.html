@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    {% if user.is_authenticated %}
+        <p>Olá, {{user.username }}</p>
+    {% endif %}
+
+    <h3>Listagem de Produtos:</h3>
+    <ul>
+        {% for produto in produtos %}
+            <li><a href="{% url 'update_produto' produto.id %}"> {{produto.nome_produto}}
+                <a href="{% url 'delete_produto' produto.id %}">Deletar</a> </a></li>
+
+        {% endfor %}
+    </ul>
+    <br>
+    <a href="{% url 'produto_novos' %}"> Novo Produto</a>
+    <br>
+    <a href="{% url 'logout' %}">Sair</a>
+
+</body>
+</html>
