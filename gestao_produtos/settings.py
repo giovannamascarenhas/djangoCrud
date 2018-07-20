@@ -27,7 +27,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS = ['geren-produto.herokuapp.com']
+ALLOWED_HOSTS = ['geren-produto.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'bootstrapform',
     'produtos',
     'home',
 ]
@@ -125,3 +126,6 @@ STATIC_URL = '/static/'
 LOGIN_URL = '/login/'
 LOGIN_REDIRECT_URL = 'lista_produto'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_DIRS = [
+    'statics',
+]

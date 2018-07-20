@@ -1,0 +1,32 @@
+body{
+    background-color: #1abc9c;
+}
+
+.bg1{
+    color: #000;
+}
+.jumbotron{
+    background-color: #fff
+}
+
+.trash-item{
+    float: right;
+}
+
+.usuario{
+    float: right;
+    text-transform: uppercase;
+}
+
+.list-group-item{
+    background-color: #000;
+}
+
+.list-group-item a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.sair{
+    float: right;
+}
